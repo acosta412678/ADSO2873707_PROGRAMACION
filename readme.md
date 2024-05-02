@@ -1,4 +1,4 @@
-# Progrma de Formación 
+# Programa de Formación 
 Analisis y desarrollo de Software
 
 # ID
