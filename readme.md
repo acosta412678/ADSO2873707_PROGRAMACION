@@ -12,6 +12,7 @@ Realización de los 30 ejercicios de PSeINT
 Realización de ejemplos iniciales en **DART**
 ### Ejercicios Guia 03
 Realización de ejercicios condicionales en *DART*
+**31 Ejercicios en total**
 1. Ejercicio 1 
 2. Ejercicio 2
 3. Ejercicio 3
