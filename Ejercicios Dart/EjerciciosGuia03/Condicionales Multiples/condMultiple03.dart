@@ -15,7 +15,7 @@ Val Num
   double resultado, v;
 
   // Entrada
-  print("el valor de v");
+  print("El valor de v");
   v = double.parse(stdin.readLineSync()!);
   print("Ingrese un numero del 1 al 4");
   num = int.parse(stdin.readLineSync()!);

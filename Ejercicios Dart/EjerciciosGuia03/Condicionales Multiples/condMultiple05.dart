@@ -22,7 +22,7 @@ Construya la solución para calcular e imprimir el costo de una llamada dada la 
   String? lugar;
   
   // Entrada
-  print("Ingrese la duración de la llamada");
+  print("Ingrese la duración de la llamada en minutos");
   duracionLlamada = double.parse(stdin.readLineSync()!);
   print("Ingrese la clave");
   clave = int.parse(stdin.readLineSync()!);
