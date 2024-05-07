@@ -8,7 +8,19 @@ el usuario quiera. No se deberá implementar las acciones como tal sino solo pri
 indiquen las acciones realizadas */
   int opcion;
   do {
-     print("Ingrese una opcion: 1. Retirar dinero 2. Consignar dinero 3. Salir");
+     print("Ingrese una opcion:");
+     print("1.Retirar dinero");
+     print("2.Consignar dinero");
+     print("3.Consultar saldo");
+     print("4.Salir");
      opcion = int.parse(stdin.readLineSync()!);
+     switch (opcion) {
+      case 1:
+      print("Cuanto dinero va retirar?");
+      break;
+      case 2:
+      print("Cuanto dinero va consignar?");
+      break; 
+     }
   } while (opcion != 3);
 }
