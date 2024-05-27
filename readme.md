@@ -8,19 +8,22 @@ Analisis y desarrollo de Software
 ## Ejercicios PSeINT 
 Realización de los 30 ejercicios de PSeINT
 ## Ejercicios DART
-### Ejemplos
+### Ejemplos DART
 Realización de ejemplos iniciales en **DART**
 ### Ejercicios Guia 03
 Realización de ejercicios condicionales en *DART*
 **31 Ejercicios en total**
-1. Ejercicio 1 
-2. Ejercicio 2
-3. Ejercicio 3
-4. Ejercicio 4
-5. Ejercicio 5
-### Ciclos 
+### Ciclos
 #### Ejemplos Ciclos
+Realización de ejemplos iniciales de ciclos en  **DART**
+##### Ejemplos FOR
+##### Ejemplos WHILE
+##### Ejemplos DOWHILE
 #### Ejercicios Guia 04
+##### FOR
+##### WHILE
+##### DOWHILE
+### Listas
 
 # Ciclo de Vida de Software a implementar
 - Requerimientos
