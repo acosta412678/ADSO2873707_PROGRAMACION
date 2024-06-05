@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadrado Mágico 3x3</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><input type="number" id="cell0" min="1" max="9"></td>
+            <td><input type="number" id="cell1" min="1" max="9"></td>
+            <td><input type="number" id="cell2" min="1" max="9"></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="cell3" min="1" max="9"></td>
+            <td><input type="number" id="cell4" min="1" max="9"></td>
+            <td><input type="number" id="cell5" min="1" max="9"></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="cell6" min="1" max="9"></td>
+            <td><input type="number" id="cell7" min="1" max="9"></td>
+            <td><input type="number" id="cell8" min="1" max="9"></td>
+        </tr>
+    </table>
+    <div id="error-message"></div>
+    <div id="success-message"></div>
+    <script>
+        const inputs = document.querySelectorAll('input');
+        const errorMessage = document.getElementById('error-message');
+        const successMessage = document.getElementById('success-message');
+
+        inputs.forEach(input => {
+            input.addEventListener('input', validateMagicSquare);
+        });
+
+        function validateMagicSquare() {
+            const values = Array.from(inputs).map(input => parseInt(input.value) || 0);
+            const uniqueValues = new Set(values);
+            
+            if (values.includes(0) || uniqueValues.size !== values.length) {
+                errorMessage.textContent = 'Los números deben ser únicos y no pueden ser 0.';
+                successMessage.textContent = '';
+                return;
+            }
+
+            const sums = [
+                values[0] + values[1] + values[2], // fila 1
+                values[3] + values[4] + values[5], // fila 2
+                values[6] + values[7] + values[8], // fila 3
+                values[0] + values[3] + values[6], // columna 1
+                values[1] + values[4] + values[7], // columna 2
+                values[2] + values[5] + values[8], // columna 3
+                values[0] + values[4] + values[8], // diagonal 1
+                values[2] + values[4] + values[6]  // diagonal 2
+            ];
+
+            const isMagic = sums.every(sum => sum === 15);
+
+            if (isMagic) {
+                successMessage.textContent = '¡Correcto! Todos suman 15.';
+                errorMessage.textContent = '';
+            } else {
+                errorMessage.textContent = 'Los números no suman 15 en todas las direcciones.';
+                successMessage.textContent = '';
+            }
+        }
+    </script>
+</body>
+</html>
