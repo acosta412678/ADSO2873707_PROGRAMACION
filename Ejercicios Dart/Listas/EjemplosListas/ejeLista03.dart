@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main(List<String> args) {
-  // como asignar y mostrar los elementos de un vector segun los datos ingresados por un mecanico
+  // Como asignar y mostrar los elementos de un vector segun los datos ingresados por un mecanico
   List<int> vectNumeros = [];
   int num;
   //ciclo para asignar la lista
