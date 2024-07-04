@@ -1,3 +1,4 @@
+import 'dart:ffi';
 import 'dart:io';
 
 void main(List<String> args) {
@@ -63,7 +64,6 @@ El programa debe preguntar si se desea continuar ingresando datos */
     double porcentajeTecnica = (tecnica / totalPersonas) * 100;
     double porcentajeProfesional = (profesional / totalPersonas) * 100;
     double porcentajePosgrado = (posgrado / totalPersonas) * 100;
-
     print("\nResultados de la encuesta:");
     print("Total de personas encuestadas: $totalPersonas");
     print("Porcentaje con estudios de primaria: ${porcentajePrimaria.toStringAsFixed(2)}%");
