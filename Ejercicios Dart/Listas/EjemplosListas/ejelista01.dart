@@ -1,7 +1,5 @@
-import 'dart:html_common';
 
 void main(List<String> args) {
-  int numero = 3;
   // lista o arreglo vacio (vector)
   List<int> vectornumeros = [];
 

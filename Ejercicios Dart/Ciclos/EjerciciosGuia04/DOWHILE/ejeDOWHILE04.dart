@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'dart:io';
 
 void main(List<String> args) {
@@ -55,8 +54,6 @@ El programa debe preguntar si se desea continuar ingresando datos */
       break;
     }
   } while (true);
-
-  int totalEducados = primaria + secundaria + tecnica + profesional + posgrado;
 
   if (totalPersonas > 0) {
     double porcentajePrimaria = (primaria / totalPersonas) * 100;

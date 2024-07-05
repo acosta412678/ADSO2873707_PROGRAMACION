@@ -5,7 +5,6 @@ void main(List<String> args) {
 que porcentaje de los n diputados esta a favor del Tratado de Libre Comercio, que porcentaje esta en
 contra y que porcentaje se abstiene de opinar.
 El programa debe preguntar si se desea continuar ingresando datos. */
-  int n;
   int favor = 0;
   int contra = 0;
   int abstencion = 0;

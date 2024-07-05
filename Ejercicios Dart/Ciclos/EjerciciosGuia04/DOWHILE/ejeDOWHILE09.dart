@@ -7,8 +7,6 @@ radianes y de radianes a grados.
 1. Pasar de grados a radianes
 2. Pasar de radianes a grados
 3. Salir del programa */
-  int opcionGradosARadianes = 1;
-  int opcionRadianesAGrados = 2;
   int opcionSalir = 3;
   int opcion;
 
