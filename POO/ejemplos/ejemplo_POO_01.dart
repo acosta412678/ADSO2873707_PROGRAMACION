@@ -1,4 +1,5 @@
 import 'dart:ffi';
+import 'dart:io';
 
 class Felino {
   // Atributos de la Clase
@@ -47,4 +48,29 @@ void main(List<String> args) {
   felino1_obj.comer();
   felino1_obj.correr();
   felino1_obj.mostrarInformacion();
+  /*********************/
+  print("*" * 50);
+  // Se declara e instancia el objeto en una sola línea de código
+  Felino felino2_obj = Felino("Pancho", 50, 60, 4);
+  felino2_obj.caminar();
+  felino2_obj.correr();
+  felino2_obj.mostrarInformacion();
+  /**************************/
+
+  print("*" * 50);
+  String nombre = "Lola";
+  double altura = 45, peso = 25.9;
+  int edad = 12;
+  Felino felino_03_obj = Felino(nombre, altura, peso, edad);
+  felino_03_obj.caminar();
+  felino_03_obj.comer();
+  felino_03_obj.correr();
+  felino_03_obj.mostrarInformacion();
+  /**************************/
+  print("*" * 50);
+  String nombre2;
+  double altura2, pesp2;
+  int edad2;
+  print("Ingrese el nombre del felino");
+  nombre2 = stdin.readLineSync()!;
 }

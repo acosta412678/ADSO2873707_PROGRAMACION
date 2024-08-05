@@ -4,9 +4,9 @@ Proceso ejemplo9
 	Escribir "Ingrese la nota";
 	leer nota;
 	si (nota >= 75) Entonces
-		escribir "Ganó la nota";
+		escribir "GanÃ³ la nota";
 	SiNo
-		escribir "Perdió la nota";
+		escribir "PerdiÃ³ la nota";
 	FinSi
 
 FinProceso
