@@ -1,42 +1,48 @@
-class Empleado {
-  String nombre;
-  int edad;
-  double salario;
-  String puesto;
-  String tipoContrato;
+import 'dart:io';
+import 'empleado.dart';
 
-  Empleado(this.nombre, this.edad, this.salario, this.puesto, this.tipoContrato);
+void main(List<String> args) {
+  List<Empleado> empleados = [];
 
-  void aumentarSalario(double porcentaje) {
-    salario += salario * (porcentaje / 100);
+  print('Ingrese el número de empleados a recolectar información:');
+  int numEmpleados = int.parse(stdin.readLineSync()!);
+
+  // Recolectar la información de los empleados
+  for (int i = 0; i < numEmpleados; i++) {
+    print('Ingrese los datos del empleado ${i + 1}:');
+
+    print('Nombre:');
+    String nombre = stdin.readLineSync()!;
+
+    print('Edad:');
+    int edad = int.parse(stdin.readLineSync()!);
+
+    print('Salario:');
+    double salario = double.parse(stdin.readLineSync()!);
+
+    print('Puesto:');
+    String puesto = stdin.readLineSync()!;
+
+    print('Tipo de contrato (Indefinido, Temporal, Contratista):');
+    String tipoContrato = stdin.readLineSync()!;
+
+    // Crear una instancia de Empleado y añadir a la lista
+    Empleado empleado = Empleado(nombre, edad, salario, puesto, tipoContrato);
+    empleados.add(empleado);
   }
 
-  void cumplirAnios() {
-    edad += 1;
-  }
-
-  void cambiarPuesto(String nuevoPuesto) {
-    puesto = nuevoPuesto;
-  }
-
-  void mostrarInformacion() {
-    print('Nombre: $nombre');
-    print('Edad: $edad');
-    print('Salario: \$${salario.toStringAsFixed(2)}');
-    print('Puesto: $puesto');
-    print('Tipo de Contrato: $tipoContrato');
-  }
-
-  double calcularBonificacion() {
-    switch (tipoContrato) {
-      case 'Contratista':
-        return salario * 0.10;
-      case 'Temporal':
-        return salario * 0.05;
-      case 'Indefinido':
-        return salario * 0.15;
-      default:
-        return 0.0;
-    }
+  // Mostrar la información de cada empleado
+  print('Información de los empleados:');
+  for (int i = 0; i < empleados.length; i++) {
+    Empleado empleado = empleados[i];
+    print('Empleado ${i + 1}:');
+    empleado.mostrarInformacion();
+    double bonificacion = empleado.calcularBonificacion();
+    print('Bonificación: $bonificacion');
+    print('Ingrese el nuevo puesto:');
+    String nuevoPuesto = stdin.readLineSync()!;
+    empleado.cambiarPuesto(nuevoPuesto);
+    empleado.cumplirAnios();
+    empleado.mostrarInformacion();
   }
 }
