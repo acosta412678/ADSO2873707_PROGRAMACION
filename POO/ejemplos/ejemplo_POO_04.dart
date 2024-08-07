@@ -1,4 +1,3 @@
-import 'dart:async';
 
 class Vehiculo {
   // Atributos de la clase
