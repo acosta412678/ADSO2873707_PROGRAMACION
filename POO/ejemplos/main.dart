@@ -37,12 +37,11 @@ void main(List<String> args) {
     Empleado empleado = empleados[i];
     print('Empleado ${i + 1}:');
     empleado.mostrarInformacion();
-    double bonificacion = empleado.calcularBonificacion();
-    print('Bonificación: $bonificacion');
     print('Ingrese el nuevo puesto:');
     String nuevoPuesto = stdin.readLineSync()!;
     empleado.cambiarPuesto(nuevoPuesto);
     empleado.cumplirAnios();
     empleado.mostrarInformacion();
+    print('Ingrese el nuevo puesto:');
   }
 }
