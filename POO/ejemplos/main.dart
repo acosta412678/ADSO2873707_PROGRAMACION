@@ -36,12 +36,16 @@ void main(List<String> args) {
   for (int i = 0; i < empleados.length; i++) {
     Empleado empleado = empleados[i];
     print('Empleado ${i + 1}:');
-    empleado.mostrarInformacion();
+    empleado.mostrarInformacion();  // Mostrar información inicial
+
+    // Cambiar puesto y aumentar edad
     print('Ingrese el nuevo puesto:');
     String nuevoPuesto = stdin.readLineSync()!;
     empleado.cambiarPuesto(nuevoPuesto);
     empleado.cumplirAnios();
+
+    // Mostrar la información después de los cambios
+    print('Información actualizada del empleado ${i + 1}:');
     empleado.mostrarInformacion();
-    print('Ingrese el nuevo puesto:');
   }
 }

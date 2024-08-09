@@ -15,40 +15,61 @@ class Empleado {
   }
 
   // Método para cumplir años
-  cumplirAnios() {
+  void cumplirAnios() {
     this.edad++;
   }
 
   // Método para cambiar el puesto
-  cambiarPuesto(String nuevoPuesto) {
+  void cambiarPuesto(String nuevoPuesto) {
     puesto = nuevoPuesto;
   }
 
   // Método para mostrar la información
   void mostrarInformacion() {
+    // Calcular bonificación y porcentaje
+    Map<String, dynamic> bonificacionData = calcularBonificacion();
+    double bonificacion = bonificacionData['bonificacion'];
+    String porcentajeBonificacion = bonificacionData['porcentaje'];
+
+    // Mostrar la información del empleado
     print("""
       Nombre: $nombre.
       Edad: $edad.
-      Salario: $salario.
+      Salario: \$${salario.toStringAsFixed(2)}.
       Puesto: $puesto.
-      Tipo Contrato: $tipoContrato
-  """);
+      Tipo Contrato: $tipoContrato.
+      Bonificación: \$${bonificacion.toStringAsFixed(2)} ($porcentajeBonificacion).
+    """);
   }
 
   // Método para calcular la bonificación
-  double calcularBonificacion() {
+  Map<String, dynamic> calcularBonificacion() {
     double bonificacion = 0;
+    String porcentajeBonificacion = "";
+
+    // Imprimir los valores de entrada para depuración
+    print("Depuración - Salario: \$${salario.toStringAsFixed(2)}, Tipo de contrato: $tipoContrato");
+
     switch (tipoContrato.toLowerCase()) {
-      case 'Contratista':
+      case 'contratista':
         bonificacion = salario * 0.10;
+        porcentajeBonificacion = "10%";
         break;
-      case 'Temporal':
+      case 'temporal':
         bonificacion = salario * 0.05;
+        porcentajeBonificacion = "5%";
         break;
-      case 'Indefinido':
+      case 'indefinido':
         bonificacion = salario * 0.15;
+        porcentajeBonificacion = "15%";
+        break;
+      default:
+        porcentajeBonificacion = "N/A";
         break;
     }
-    return bonificacion;
+    return {
+      'bonificacion': bonificacion,
+      'porcentaje': porcentajeBonificacion,
+    };
   }
 }
