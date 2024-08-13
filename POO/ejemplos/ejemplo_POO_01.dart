@@ -38,9 +38,6 @@ class Felino {
 
 void main(List<String> args) {
   // Creación del objeto
-  int numero;
-  String texto;
-  bool estado;
   Felino felino1_obj; // Se declarara un objeto de la clase felino
   felino1_obj = Felino("Michi", 90, 3.5, 2);
   felino1_obj.caminar();
@@ -68,8 +65,7 @@ void main(List<String> args) {
   /**************************/
   print("*" * 50);
   String nombre2;
-  double altura2, pesp2;
-  int edad2;
   print("Ingrese el nombre del felino");
   nombre2 = stdin.readLineSync()!;
+  print("$nombre2");
 }
