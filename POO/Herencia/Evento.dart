@@ -1,14 +1,12 @@
-import 'dart:ffi';
-
 class Evento {
   String _nombre; // Atributo privado
   int cantPersonas; // Atributo publico
   DateTime _fecha; // Atributo privado
 
-  Evento(this._nombre, this.cantPersonas, this._fecha)
+  Evento(this._nombre, this.cantPersonas, this._fecha);
 
-  void setNombre(String nom) {
-    _nombre = nom;
+  void setNombre(String nombre) {
+    _nombre = nombre;
   }
   String getNombre() {
     return _nombre;

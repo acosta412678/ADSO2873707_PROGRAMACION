@@ -1,4 +1,4 @@
-CREATE DATABSE articulos_db;
+CREATE DATABASE articulos_db;
 USE articulos_db;
 
 CREATE TABLE usuario(

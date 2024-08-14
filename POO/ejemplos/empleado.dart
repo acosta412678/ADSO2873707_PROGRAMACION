@@ -47,9 +47,6 @@ class Empleado {
     double bonificacion = 0;
     String porcentajeBonificacion = "";
 
-    // Imprimir los valores de entrada para depuración
-    print("Depuración - Salario: \$${salario.toStringAsFixed(2)}, Tipo de contrato: $tipoContrato");
-
     switch (tipoContrato.toLowerCase()) {
       case 'contratista':
         bonificacion = salario * 0.10;

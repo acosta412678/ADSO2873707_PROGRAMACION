@@ -4,6 +4,4 @@ class Entrenador {
   int nivelExperiencia, cantidadBatallasGanadas;
 
   Entrenador(this.nombre, this.email, this.fechaNacimiento, this.nivelExperiencia, this.cantidadBatallasGanadas);
-
-  void 
 }
