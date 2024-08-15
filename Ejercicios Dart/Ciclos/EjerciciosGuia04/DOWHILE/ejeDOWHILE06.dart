@@ -5,34 +5,36 @@ void main(List<String> args) {
 cada una de las 5 unidades de la materia. Al final que escriba el número de control del alumno que
 obtuvo mayor promedio. Suponga que los alumnos tienen diferentes promedios.
  */
-  print("Ingrese la cantidad de alumnos:");
-  int cantidadAlumnos = int.parse(stdin.readLineSync()!);
+  int? numeroDeControlMaximo;
+  double promedioMaximo = 0.0;
 
-  String mejorNumeroControl = "";
-  double mejorPromedio = 0.0;
-
-  for (int i = 1; i <= cantidadAlumnos; i++) {
-    print("\nAlumno $i:");
-    print("Ingrese el número de control:");
-    String numeroControl = stdin.readLineSync()!;
+  String continuar;
+  do {
+    print("Ingresa el número de control del alumno: ");
+    int numeroDeControl = int.parse(stdin.readLineSync()!);
 
     double sumaCalificaciones = 0.0;
-
-    for (int j = 1; j <= 5; j++) {
-      print("Ingrese la calificación de la unidad $j:");
+    for (int i = 1; i <= 5; i++) {
+      print("Ingresa la calificación de la unidad $i: ");
       double calificacion = double.parse(stdin.readLineSync()!);
       sumaCalificaciones += calificacion;
     }
 
     double promedio = sumaCalificaciones / 5;
 
-    print("Promedio del alumno $i: $promedio");
-
-    if (promedio > mejorPromedio) {
-      mejorPromedio = promedio;
-      mejorNumeroControl = numeroControl;
+    if (promedio > promedioMaximo) {
+      promedioMaximo = promedio;
+      numeroDeControlMaximo = numeroDeControl;
     }
-  }
 
-  print("\nEl alumno con el mejor promedio es el número de control: $mejorNumeroControl");
+    print("¿Deseas ingresar otro alumno? (s/n): ");
+    continuar = stdin.readLineSync()!.toLowerCase();
+  } while (continuar == 's');
+
+  if (numeroDeControlMaximo != null) {
+    print("El alumno con el mayor promedio es el de número de control $numeroDeControlMaximo con un promedio de $promedioMaximo.");
+  } else {
+    print("No se ingresaron alumnos.");
+  }
 }
+

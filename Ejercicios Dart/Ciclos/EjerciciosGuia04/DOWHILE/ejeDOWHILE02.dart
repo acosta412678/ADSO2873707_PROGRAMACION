@@ -4,17 +4,15 @@ void main(List<String> args) {
   /**Un alumno de la clase de lógica matemática desea desarrollar un algoritmo y diagrama de flujo en el
 cual introduzca un número entero positivo e invierta los dígitos del número. Mostrar el número
 invertido. */
-  print("Ingrese un número entero positivo:");
+  print("Ingresa un número entero positivo: ");
   int numero = int.parse(stdin.readLineSync()!);
+  int numeroInvertido = 0;
 
-  if (numero <= 0) {
-    print("El número ingresado no es positivo.");
-    return;
-  }
+  do {
+    int digito = numero % 10;
+    numeroInvertido = numeroInvertido * 10 + digito;
+    numero ~/= 10;
+  } while (numero > 0);
 
-  String numeroString = numero.toString();
-  String numeroInvertido = numeroString.split('').reversed.join('');
-  int numeroInvertidoInt = int.parse(numeroInvertido);
-
-  print("El número invertido es: $numeroInvertidoInt");
+  print("Número invertido: $numeroInvertido");
 }
