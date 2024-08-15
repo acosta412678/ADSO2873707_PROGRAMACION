@@ -11,7 +11,6 @@ Realización de los 30 ejercicios de PSeINT
 ## Ejercicios DART
 ### Ejemplos DART
 Realización de ejemplos iniciales en **DART**
-
 ### Ejercicios Guia 03
 Realización de ejercicios condicionales en *DART*
 **31 Ejercicios en total**
@@ -35,6 +34,13 @@ Realización de ejemplos iniciales de listas en  **DART**
 #### Ejercicios Guia 05
 ##### Matrices
 ##### Vectores
+
+## POO
+
+### Ejemplos POO
+Realización de ejemplos iniciales de POO en  **DART**
+
+### Herencia
 
 ### Metodos y Funciones
 # Ciclo de Vida de Software a implementar
