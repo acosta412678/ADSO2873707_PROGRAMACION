@@ -6,7 +6,7 @@ Proceso EJEMPLO4
 	PPL <- 7218 ;
 	promedio_condena <- 8.6 ;
 	nombre_carcel <- " la modelo " ;
-	direccion_carcel<- " Cra. 57 #1560, Bogotá ";
-	Escribir " En la carcel" ,nombre_carcel , " hay ", PPL, " reclusos y tienen un promedio de ",promedio_condena," años de condena. La cárcel queda situada en ",direccion_carcel;
+	direccion_carcel<- " Cra. 57 #1560, Bogotï¿½ ";
+	Escribir " En la carcel" ,nombre_carcel , " hay ", PPL, " reclusos y tienen un promedio de ",promedio_condena," aï¿½os de condena. La cï¿½rcel queda situada en ",direccion_carcel;
 
 FinProceso
