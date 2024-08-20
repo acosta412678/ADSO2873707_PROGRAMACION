@@ -1,25 +1,23 @@
 class Senamon {
-  String nombre, fase, descripcion, tipoSenamon/*fuego, agua, hierva, volador, eléctrico)*/;
-  int nivel, nivelEnergia, nivelAtaque, puntosSalud;
+  String nombre;
+  int nivel;
+  String tipo;
   double peso;
-  
-  Senamon(
-      this.nombre,
-      this.nivel,
-      this.tipoSenamon,
-      this.peso,
-      this.puntosSalud,
-      this.nivelAtaque,
-      this.fase,
-      this.nivelEnergia,
-      this.descripcion);
-}
+  int puntosSalud;
+  int nivelAtaque;
+  String fase;
+  int nivelEnergia;
+  String descripcion;
 
-class Entrenador {
-  String nombre, email;
-  DateTime fechaNacimiento;
-  int nivelExperiencia, cantidadBatallasGanadas;
-  List<Senamon> senamones;
-
-  Entrenador(this.nombre, this.email, this.fechaNacimiento, this.nivelExperiencia, this.cantidadBatallasGanadas, this.senamones);
+  Senamon({
+    required this.nombre,
+    required this.nivel,
+    required this.tipo,
+    required this.peso,
+    required this.puntosSalud,
+    required this.nivelAtaque,
+    required this.fase,
+    required this.nivelEnergia,
+    required this.descripcion,
+  });
 }
