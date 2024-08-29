@@ -16,5 +16,10 @@ class Entrenador {
     required this.batallasGanadas,
     required this.senamones,
   });
-
+  
+  
 }
+
+void mostrarSenamones() {
+    
+  }

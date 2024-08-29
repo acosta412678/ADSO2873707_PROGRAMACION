@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'batalla.dart';
 
 String lanzarMoneda() {
   final Random random = Random();
@@ -7,8 +6,11 @@ String lanzarMoneda() {
   String resultado;
   if (num == 1) {
     resultado = "Cara";
+    // Jugador 1 inicia
+
   } else {
     resultado = "Cruz";
+    // Jugador 2 inicia
   }
   print("El resultado del lanzamiento de la moneda es: $resultado");
   return resultado;
