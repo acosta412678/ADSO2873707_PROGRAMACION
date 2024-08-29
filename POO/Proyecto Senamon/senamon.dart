@@ -1,12 +1,12 @@
 class Senamon {
   String nombre;
   int nivel;
-  String tipo;
+  String tipo; // fuego, agua, hierva, volador, eléctrico
   double peso;
-  int puntosSalud;
-  int nivelAtaque;
+  double puntosSalud;
+  double nivelAtaque;
   String fase;
-  int nivelEnergia;
+  double nivelEnergia;
   String descripcion;
 
   Senamon({

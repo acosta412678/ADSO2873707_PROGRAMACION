@@ -4,7 +4,7 @@ class Entrenador {
   String nombre;
   String email;
   DateTime fechaNacimiento;
-  int nivelExperiencia;
+  double experiencia;
   int batallasGanadas;
   List<Senamon> senamones;
 
@@ -12,10 +12,9 @@ class Entrenador {
     required this.nombre,
     required this.email,
     required this.fechaNacimiento,
-    this.nivelExperiencia = 0,
-    this.batallasGanadas = 0,
+    required this.experiencia,
+    required this.batallasGanadas,
     required this.senamones,
   });
 
-  // Puedes agregar métodos aquí más adelante, como entrenar Senamones, etc.
 }
