@@ -1,54 +1,69 @@
-# Programa de Formación 
-Análisis y Desarrollo de Software
+# Programa de Formación: Análisis y Desarrollo de Software
 
-# ID
-2873707
+## ID: 2873707
 
-# Contenido
-## Ejercicios PSeINT 
-Realización de los 30 ejercicios de PSeINT
+---
 
-## Ejercicios DART
-### Ejemplos DART
-Realización de ejemplos iniciales en **DART**
-### Ejercicios Guia 03
-Realización de ejercicios condicionales en *DART*
-**31 Ejercicios en total**
+## Contenido
 
-### Ciclos
-#### Ejemplos Ciclos
-Realización de ejemplos iniciales de ciclos en  **DART**
-##### Ejemplos FOR
-##### Ejemplos WHILE
-##### Ejemplos DOWHILE
+### Ejercicios PSeINT
+- Realización de los 30 ejercicios de PSeINT.
 
-#### Ejercicios Guia 04
-##### FOR
-##### WHILE
-##### DOWHILE
+### Ejercicios DART
 
-### Listas
-#### Ejemplos Listas
-Realización de ejemplos iniciales de listas en  **DART**
+#### Ejemplos DART
+- Realización de ejemplos iniciales en **DART**.
 
-#### Ejercicios Guia 05
-##### Matrices
-##### Vectores
+#### Ejercicios Guía 03
+- Ejercicios condicionales en **DART**.
+- **31 ejercicios en total**.
+
+#### Ciclos
+
+##### Ejemplos Ciclos
+- Ejemplos iniciales de ciclos en **DART**.
+
+###### Ejemplos:
+- **FOR**
+- **WHILE**
+- **DOWHILE**
+
+##### Ejercicios Guía 04
+- **FOR**
+- **WHILE**
+- **DOWHILE**
+
+#### Listas
+
+##### Ejemplos Listas
+- Ejemplos iniciales de listas en **DART**.
+
+##### Ejercicios Guía 05
+- **Matrices**
+- **Vectores**
 
 ### Mini Proyecto
 
-## POO
+---
+
+## Programación Orientada a Objetos (POO)
 
 ### Ejemplos POO
-Realización de ejemplos iniciales de POO en  **DART**
+- Ejemplos iniciales de POO en **DART**.
 
 ### Herencia
 
 ### Proyecto Senamon
-# Ciclo de Vida de Software a implementar
-- Requerimientos
-- Analisis
-- Diseño
-- Implementación
-- Pruebas
-- Mantenimiento
+
+---
+
+## Ciclo de Vida de Software a Implementar
+
+1. **Requerimientos**
+2. **Análisis**
+3. **Diseño**
+4. **Implementación**
+5. **Pruebas**
+6. **Mantenimiento**
+
+---
