@@ -1,5 +1,5 @@
 # Programa de Formación 
-Analisis y desarrollo de Software
+Análisis y Desarrollo de Software
 
 # ID
 2873707
@@ -35,6 +35,8 @@ Realización de ejemplos iniciales de listas en  **DART**
 ##### Matrices
 ##### Vectores
 
+### Mini Proyecto
+
 ## POO
 
 ### Ejemplos POO
@@ -42,7 +44,7 @@ Realización de ejemplos iniciales de POO en  **DART**
 
 ### Herencia
 
-### Metodos y Funciones
+### Proyecto Senamon
 # Ciclo de Vida de Software a implementar
 - Requerimientos
 - Analisis
