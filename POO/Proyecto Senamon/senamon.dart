@@ -1,13 +1,7 @@
-class Senamon {
-  String nombre;
-  int nivel;
-  String tipo; // fuego, agua, hierva, volador, eléctrico
+class Senamon { 
+  String nombre, tipo, fase, descripcion;
+  int nivel, puntosSalud, nivelAtaque, nivelEnergia;
   double peso;
-  double puntosSalud;
-  double nivelAtaque;
-  String fase;
-  double nivelEnergia;
-  String descripcion;
 
   Senamon({
     required this.nombre,
@@ -20,4 +14,18 @@ class Senamon {
     required this.nivelEnergia,
     required this.descripcion,
   });
+
+  void entrenar(int aumentoAtaque, int aumentoSalud) {
+    nivelAtaque += aumentoAtaque;
+    puntosSalud += aumentoSalud;
+  }
+
+  void recibirAtaque(int danio) {
+    puntosSalud -= danio;
+    if (puntosSalud < 0) puntosSalud = 0;
+  }
+
+  bool estaVivo() {
+    return puntosSalud > 0;
+  }
 }

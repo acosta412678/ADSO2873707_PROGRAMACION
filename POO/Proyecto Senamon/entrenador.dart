@@ -1,25 +1,44 @@
 import 'senamon.dart';
 
 class Entrenador {
-  String nombre;
-  String email;
+  String nombre, email;
   DateTime fechaNacimiento;
-  double experiencia;
-  int batallasGanadas;
+  int nivelExperiencia, batallasGanadas;
   List<Senamon> senamones;
 
   Entrenador({
     required this.nombre,
     required this.email,
     required this.fechaNacimiento,
-    required this.experiencia,
-    required this.batallasGanadas,
+    this.nivelExperiencia = 0,
+    this.batallasGanadas = 0,
     required this.senamones,
   });
-  
-  
-}
 
-void mostrarSenamones() {
-    
+  void entrenarSenamon(int indice, int aumentoAtaque, int aumentoSalud) {
+    if (indice < 0 || indice >= senamones.length) return;
+    int costoExperiencia = (aumentoAtaque + aumentoSalud) * 10;
+    if (nivelExperiencia >= costoExperiencia) {
+      senamones[indice].entrenar(aumentoAtaque, aumentoSalud);
+      nivelExperiencia -= costoExperiencia;
+    } else {
+      print("No tienes suficiente experiencia para entrenar.");
+    }
   }
+
+  void agregarSenamon(Senamon nuevoSenamon) {
+    if (senamones.length < 5) {
+      senamones.add(nuevoSenamon);
+    } else {
+      print("Ya tienes 5 Senamones. Debes reemplazar uno.");
+    }
+  }
+
+  void reemplazarSenamon(int indice, Senamon nuevoSenamon) {
+    if (indice >= 0 && indice < senamones.length) {
+      senamones[indice] = nuevoSenamon;
+    } else {
+      print("Índice fuera de rango.");
+    }
+  }
+}
