@@ -7,53 +7,50 @@
 ## Contenido
 
 ### Ejercicios PSeINT
+
 - Realización de los 30 ejercicios de PSeINT.
 
-### Ejercicios DART
+### Ejercicios Dart
 
-#### Ejemplos DART
-- Realización de ejemplos iniciales en **DART**.
+#### Ejemplos Dart
+
+- Realización de ejemplos iniciales en **Dart**.
 
 #### Ejercicios Guía 03
-- Ejercicios condicionales en **DART**.
+
+- Ejercicios condicionales en **Dart**.
 - **31 ejercicios en total**.
 
 #### Ciclos
 
 ##### Ejemplos Ciclos
-- Ejemplos iniciales de ciclos en **DART**.
 
-###### Ejemplos:
-- **FOR**
-- **WHILE**
-- **DOWHILE**
+- Ejemplos iniciales de ciclos en **Dart**.
+
+###### Ejemplos
+
+- **For**
+- **While**
+- **DoWhile**
 
 ##### Ejercicios Guía 04
-- **FOR**
-- **WHILE**
-- **DOWHILE**
+
+- **For**
+- **While**
+- **DoWhile**
 
 #### Listas
 
 ##### Ejemplos Listas
-- Ejemplos iniciales de listas en **DART**.
+
+- Ejemplos iniciales de listas en **Dart**.
 
 ##### Ejercicios Guía 05
+
 - **Matrices**
 - **Vectores**
 
 ### Mini Proyecto
-
----
-
-## Programación Orientada a Objetos (POO)
-
-### Ejemplos POO
-- Ejemplos iniciales de POO en **DART**.
-
-### Herencia
-
-### Proyecto Senamon
 
 ---
 
@@ -65,5 +62,3 @@
 4. **Implementación**
 5. **Pruebas**
 6. **Mantenimiento**
-
----
