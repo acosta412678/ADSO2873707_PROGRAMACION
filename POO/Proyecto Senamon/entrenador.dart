@@ -1,51 +1,58 @@
-// entrenador.dart
 import 'senamon.dart';
 
 class Entrenador {
+  // Datos básicos del entrenador
   String nombre;
   String email;
   DateTime fechaNacimiento;
-  int nivelExperiencia;
-  int batallasGanadas;
-  List<Senamon> senamones;
+  int nivelExperiencia; // Nivel de experiencia del entrenador
+  int batallasGanadas;  // Contador de batallas ganadas
+  List<Senamon> senamones;  // Lista de Senamones que posee el entrenador
 
-  // Constructor para inicializar un entrenador
+  // Constructor con algunos valores por defecto
   Entrenador({
     required this.nombre,
     required this.email,
     required this.fechaNacimiento,
-    this.nivelExperiencia = 0,
-    this.batallasGanadas = 0,
-    required this.senamones,
+    this.nivelExperiencia = 0, // Por defecto nivel 0
+    this.batallasGanadas = 0,  // Por defecto ninguna batalla ganada
+    required this.senamones,   // Se requiere una lista de Senamones
   });
 
-  // Entrena un Senamon específico aumentando su ataque y salud
+  // Método para entrenar a un Senamon
   void entrenarSenamon(int indice, int aumentoAtaque, int aumentoSalud) {
-    if (indice < 0 || indice >= senamones.length) return; // Verifica si el índice es válido
-    int costoExperiencia = (aumentoAtaque + aumentoSalud) * 10; // Calcula el costo de experiencia
+    // Verifica si el índice es válido
+    if (indice < 0 || indice >= senamones.length) return;
+    
+    // Calcula el costo de experiencia según el entrenamiento
+    int costoExperiencia = (aumentoAtaque + aumentoSalud) * 10;
+    
+    // Verifica si el entrenador tiene suficiente experiencia
     if (nivelExperiencia >= costoExperiencia) {
       senamones[indice].entrenar(aumentoAtaque, aumentoSalud); // Entrena al Senamon
-      nivelExperiencia -= costoExperiencia; // Deducta experiencia usada
+      nivelExperiencia -= costoExperiencia; // Resta el costo de experiencia
     } else {
-      print("No tienes suficiente experiencia para entrenar."); // Mensaje de error si no hay suficiente experiencia
+      print("No tienes suficiente experiencia para entrenar.");
     }
   }
 
-  // Agrega un nuevo Senamon a la lista de Senamones del entrenador
+  // Método para agregar un nuevo Senamon
   void agregarSenamon(Senamon nuevoSenamon) {
-    if (senamones.length < 5) { // Verifica que el número máximo de Senamones no se haya alcanzado
+    // Verifica si hay espacio (máximo 5 Senamones)
+    if (senamones.length < 5) {
       senamones.add(nuevoSenamon); // Añade el nuevo Senamon
     } else {
-      print("Ya tienes 5 Senamones. Debes reemplazar uno."); // Mensaje de error si hay demasiados Senamones
+      print("Ya tienes 5 Senamones. Debes reemplazar uno.");
     }
   }
 
-  // Reemplaza un Senamon existente con uno nuevo en una posición específica
+  // Método para reemplazar un Senamon existente
   void reemplazarSenamon(int indice, Senamon nuevoSenamon) {
-    if (indice >= 0 && indice < senamones.length) { // Verifica si el índice es válido
+    // Verifica si el índice es válido
+    if (indice >= 0 && indice < senamones.length) {
       senamones[indice] = nuevoSenamon; // Reemplaza el Senamon en la posición indicada
     } else {
-      print("Índice fuera de rango."); // Mensaje de error si el índice es inválido
+      print("Índice fuera de rango.");
     }
   }
 }

@@ -1,57 +1,56 @@
-// Importa las librerías necesarias
-import 'dart:io';
-import 'entrenador.dart';
-import 'juego.dart';
-import 'senamon.dart';
-import 'batalla.dart';
-import 'torneo.dart';
+import 'dart:io'; // Importa la biblioteca para entrada/salida
+import 'entrenador.dart'; // Importa la clase Entrenador
+import 'juego.dart'; // Importa la clase Juego
+import 'senamon.dart'; // Importa la clase Senamon
+import 'batalla.dart'; // Importa la clase Batalla
+import 'torneo.dart'; // Importa la clase Torneo
 
-// Función principal que arranca el programa
 void main() {
-  // Crea una instancia de Juego y obtiene la lista de todos los Senamones
+  // Crea una instancia de Juego
   Juego juego = Juego();
+  // Obtiene la lista de todos los Senamones disponibles
   List<Senamon> todosLosSenamones = juego.crearSenamones();
 
-  // Bucle infinito para mostrar el menú y gestionar opciones
   while (true) {
-    mostrarMenu();  // Muestra el menú principal
-    String? opcion = stdin.readLineSync();  // Lee la opción del usuario
+    // Muestra el menú principal
+    mostrarMenu();
+    String? opcion = stdin.readLineSync();
 
-    // Maneja la opción seleccionada por el usuario
     switch (opcion) {
       case '1':
-        // Crea dos jugadores y realiza una batalla 1 vs 1
+        // Crear dos entrenadores y realizar una batalla entre ellos
         Entrenador jugador1 = juego.crearEntrenador("Jugador 1", todosLosSenamones);
         Entrenador jugador2 = juego.crearEntrenador("Jugador 2", todosLosSenamones);
         Batalla batalla = Batalla(jugador1, jugador2);
         batalla.iniciar();
         break;
       case '2':
-        // Entrena los Senamones de un jugador
+        // Crear un entrenador y entrenar sus Senamones
         Entrenador jugador = juego.crearEntrenador("Jugador", todosLosSenamones);
         entrenarSenamones(jugador);
         break;
       case '3':
-        // Muestra las estadísticas de dos jugadores
+        // Crear dos entrenadores y mostrar sus estadísticas
         Entrenador jugadorA = juego.crearEntrenador("Jugador A", todosLosSenamones);
         Entrenador jugadorB = juego.crearEntrenador("Jugador B", todosLosSenamones);
         mostrarEstadisticas(jugadorA, jugadorB);
         break;
       case '4':
-        // Inicia un torneo con varios jugadores
+        // Iniciar un torneo con varios jugadores
         iniciarTorneo(juego, todosLosSenamones);
         break;
       case '0':
-        // Sale del programa
+        // Salir del juego
         print("Saliendo del juego...");
         return;
       default:
+        // Opción no válida
         print("Opción no válida.");
     }
   }
 }
 
-// Muestra el menú principal con las opciones disponibles
+// Muestra el menú principal con opciones disponibles
 void mostrarMenu() {
   print("\n--- Menú Principal ---");
   print("1. Iniciar Batalla 1 vs 1");
@@ -62,7 +61,7 @@ void mostrarMenu() {
   print("Seleccione una opción:");
 }
 
-// Permite entrenar los Senamones de un entrenador
+// Permite al jugador entrenar sus Senamones
 void entrenarSenamones(Entrenador entrenador) {
   print("Selecciona un Senamon para entrenar:");
   // Muestra la lista de Senamones del entrenador
@@ -70,9 +69,10 @@ void entrenarSenamones(Entrenador entrenador) {
     Senamon senamon = entrenador.senamones[i];
     print("$i: ${senamon.nombre} (Ataque: ${senamon.nivelAtaque}, Salud: ${senamon.puntosSalud})");
   }
+  // Selección del Senamon para entrenar
   int seleccion = int.parse(stdin.readLineSync()!);
 
-  // Solicita al usuario los puntos a agregar
+  // Solicita puntos de ataque y salud a agregar
   print("¿Cuántos puntos de ataque deseas agregar?");
   int puntosAtaque = int.parse(stdin.readLineSync()!);
   print("¿Cuántos puntos de salud deseas agregar?");
@@ -89,19 +89,19 @@ void mostrarEstadisticas(Entrenador jugador1, Entrenador jugador2) {
   mostrarEstadisticasJugador(jugador2);
 }
 
-// Muestra las estadísticas de un solo jugador
+// Muestra las estadísticas de un jugador
 void mostrarEstadisticasJugador(Entrenador entrenador) {
   print("Jugador: ${entrenador.nombre}");
   print("Batallas ganadas: ${entrenador.batallasGanadas}");
   print("Nivel de experiencia: ${entrenador.nivelExperiencia}");
   print("Senamones:");
-  // Muestra la información de cada Senamon del entrenador
+  // Muestra información de cada Senamon del entrenador
   for (Senamon senamon in entrenador.senamones) {
     print("- ${senamon.nombre} (Salud: ${senamon.puntosSalud}, Ataque: ${senamon.nivelAtaque})");
   }
 }
 
-// Inicia un torneo con el número de jugadores especificado
+// Inicia un torneo con un número determinado de jugadores
 void iniciarTorneo(Juego juego, List<Senamon> senamonesDisponibles) {
   print("Ingrese el número de jugadores (mínimo 2):");
   int numJugadores = int.parse(stdin.readLineSync()!);
@@ -110,7 +110,7 @@ void iniciarTorneo(Juego juego, List<Senamon> senamonesDisponibles) {
     return;
   }
 
-  // Crea la lista de jugadores
+  // Crea la lista de entrenadores para el torneo
   List<Entrenador> jugadores = [];
   for (int i = 1; i <= numJugadores; i++) {
     print("Creando datos para Jugador $i:");
@@ -118,7 +118,7 @@ void iniciarTorneo(Juego juego, List<Senamon> senamonesDisponibles) {
     jugadores.add(jugador);
   }
 
-  // Inicia el torneo con la lista de jugadores
+  // Inicia el torneo con los entrenadores creados
   Torneo torneo = Torneo(jugadores);
   torneo.iniciar();
 }

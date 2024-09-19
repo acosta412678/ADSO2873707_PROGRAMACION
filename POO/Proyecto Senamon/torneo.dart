@@ -1,46 +1,40 @@
-// Importa las clases necesarias para el torneo
-import 'batalla.dart';
-import 'entrenador.dart';
+import 'batalla.dart'; // Importar la clase Batalla
+import 'entrenador.dart'; // Importar la clase Entrenador
 
-// Define la clase Torneo para gestionar las batallas entre entrenadores
+// Clase Torneo para gestionar el torneo entre entrenadores
 class Torneo {
-  List<Entrenador> jugadores;  // Lista de jugadores en el torneo
+  List<Entrenador> jugadores; // Lista de jugadores (entrenadores) en el torneo
 
-  // Constructor para inicializar el torneo con una lista de jugadores
+  // Constructor que recibe la lista de jugadores
   Torneo(this.jugadores);
 
   // Método para iniciar el torneo
   void iniciar() {
     // Mientras haya más de un jugador en el torneo
     while (jugadores.length > 1) {
-      print("Iniciando ronda del torneo...");
+      print("Iniciando ronda del torneo..."); // Mensaje de inicio de ronda
 
-      List<Entrenador> ganadoresRonda = [];  // Lista para los ganadores de la ronda
-      // Recorre la lista de jugadores de dos en dos
-      for (int i = 0; i < jugadores.length; i += 2) {
-        // Asegura que no se salga del rango de la lista
-        if (i + 1 < jugadores.length) {
-          print("Batalla entre ${jugadores[i].nombre} y ${jugadores[i + 1].nombre}!");
-          Batalla batalla = Batalla(jugadores[i], jugadores[i + 1]);
-          batalla.iniciar();  // Inicia la batalla entre dos jugadores
+      List<Entrenador> ganadoresRonda = []; // Lista para guardar los ganadores de la ronda
+      for (int i = 0; i < jugadores.length; i += 2) { // Iterar en pares de jugadores
+        if (i + 1 < jugadores.length) { // Verificar que hay un par para luchar
+          print("Batalla entre ${jugadores[i].nombre} y ${jugadores[i + 1].nombre}!"); // Anunciar la batalla
+          Batalla batalla = Batalla(jugadores[i], jugadores[i + 1]); // Crear una instancia de Batalla
+          batalla.iniciar(); // Iniciar la batalla
 
-          // Añade el ganador de la batalla a la lista de ganadores
-          if (jugadores[i].senamones.any((s) => s.estaVivo())) {
-            ganadoresRonda.add(jugadores[i]);
+          // Verificar quién ganó la batalla
+          if (jugadores[i].senamones.any((s) => s.estaVivo())) { // Si el Senamon del primer jugador está vivo
+            ganadoresRonda.add(jugadores[i]); // Agregar el primer jugador a los ganadores
           } else {
-            ganadoresRonda.add(jugadores[i + 1]);
+            ganadoresRonda.add(jugadores[i + 1]); // De lo contrario, agregar el segundo jugador a los ganadores
           }
         } else {
-          // Si hay un número impar de jugadores, el último jugador pasa a la siguiente ronda
-          ganadoresRonda.add(jugadores[i]);
+          ganadoresRonda.add(jugadores[i]); // Si hay un número impar de jugadores, el último jugador pasa a la siguiente ronda
         }
       }
 
-      // Actualiza la lista de jugadores con los ganadores de la ronda
-      jugadores = ganadoresRonda;
+      jugadores = ganadoresRonda; // Actualizar la lista de jugadores con los ganadores de la ronda
     }
 
-    // Imprime el nombre del ganador del torneo
-    print("El ganador del torneo es: ${jugadores[0].nombre}");
+    print("El ganador del torneo es: ${jugadores[0].nombre}"); // Anunciar el ganador final
   }
 }

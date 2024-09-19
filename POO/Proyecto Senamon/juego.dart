@@ -4,10 +4,12 @@ import 'entrenador.dart';
 import 'senamon.dart';
 
 class Juego {
-  // Crea una lista de Senamones con diferentes tipos y características
+  
+  // Crea una lista de Senamones
+  // Devuelve una lista con Senamones de diferentes tipos y características
   List<Senamon> crearSenamones() {
     return [
-      // Fuego
+      // Senamones tipo fuego
       Senamon(nombre: "Charmander", nivel: 5, tipo: "fuego", peso: 8.5, puntosSalud: 39, nivelAtaque: 52, fase: "Charizard", nivelEnergia: 100, descripcion: "El Senamon fuego."),
       Senamon(nombre: "Vulpix", nivel: 5, tipo: "fuego", peso: 9.9, puntosSalud: 38, nivelAtaque: 41, fase: "Ninetales", nivelEnergia: 100, descripcion: "El Senamon fuego."),
       Senamon(nombre: "Growlithe", nivel: 5, tipo: "fuego", peso: 19.0, puntosSalud: 55, nivelAtaque: 70, fase: "Arcanine", nivelEnergia: 100, descripcion: "El Senamon fuego."),
@@ -19,7 +21,7 @@ class Juego {
       Senamon(nombre: "Magby", nivel: 5, tipo: "fuego", peso: 21.4, puntosSalud: 45, nivelAtaque: 75, fase: "Magmar", nivelEnergia: 100, descripcion: "El Senamon fuego."),
       Senamon(nombre: "Litleo", nivel: 5, tipo: "fuego", peso: 13.5, puntosSalud: 62, nivelAtaque: 50, fase: "Pyroar", nivelEnergia: 100, descripcion: "El Senamon fuego."),
 
-      // Agua
+      // Senamones tipo agua
       Senamon(nombre: "Squirtle", nivel: 5, tipo: "agua", peso: 9.0, puntosSalud: 44, nivelAtaque: 48, fase: "Blastoise", nivelEnergia: 100, descripcion: "El Senamon agua."),
       Senamon(nombre: "Psyduck", nivel: 5, tipo: "agua", peso: 19.6, puntosSalud: 50, nivelAtaque: 52, fase: "Golduck", nivelEnergia: 100, descripcion: "El Senamon agua."),
       Senamon(nombre: "Poliwag", nivel: 5, tipo: "agua", peso: 12.4, puntosSalud: 40, nivelAtaque: 50, fase: "Poliwrath", nivelEnergia: 100, descripcion: "El Senamon agua."),
@@ -31,7 +33,7 @@ class Juego {
       Senamon(nombre: "Mudkip", nivel: 5, tipo: "agua", peso: 7.6, puntosSalud: 50, nivelAtaque: 70, fase: "Swampert", nivelEnergia: 100, descripcion: "El Senamon agua."),
       Senamon(nombre: "Magikarp", nivel: 5, tipo: "agua", peso: 10.0, puntosSalud: 20, nivelAtaque: 10, fase: "Gyarados", nivelEnergia: 100, descripcion: "El Senamon agua."),
 
-      // Hierba
+      // Senamones tipo hierba
       Senamon(nombre: "Bulbasaur", nivel: 5, tipo: "hierba", peso: 6.9, puntosSalud: 45, nivelAtaque: 49, fase: "Venusaur", nivelEnergia: 100, descripcion: "El Senamon hierba."),
       Senamon(nombre: "Oddish", nivel: 5, tipo: "hierba", peso: 5.4, puntosSalud: 45, nivelAtaque: 50, fase: "Vileplume", nivelEnergia: 100, descripcion: "El Senamon hierba."),
       Senamon(nombre: "Bellsprout", nivel: 5, tipo: "hierba", peso: 4.0, puntosSalud: 50, nivelAtaque: 75, fase: "Victreebel", nivelEnergia: 100, descripcion: "El Senamon hierba."),
@@ -43,7 +45,7 @@ class Juego {
       Senamon(nombre: "Roselia", nivel: 5, tipo: "hierba", peso: 2.0, puntosSalud: 50, nivelAtaque: 60, fase: "Roserade", nivelEnergia: 100, descripcion: "El Senamon hierba."),
       Senamon(nombre: "Turtwig", nivel: 5, tipo: "hierba", peso: 10.2, puntosSalud: 55, nivelAtaque: 68, fase: "Torterra", nivelEnergia: 100, descripcion: "El Senamon hierba."),
 
-      // Volador
+      // Senamones tipo volador
       Senamon(nombre: "Pidgey", nivel: 5, tipo: "volador", peso: 1.8, puntosSalud: 40, nivelAtaque: 45, fase: "Pidgeot", nivelEnergia: 100, descripcion: "El Senamon volador."),
       Senamon(nombre: "Spearow", nivel: 5, tipo: "volador", peso: 2.0, puntosSalud: 40, nivelAtaque: 60, fase: "Fearow", nivelEnergia: 100, descripcion: "El Senamon volador."),
       Senamon(nombre: "Zubat", nivel: 5, tipo: "volador", peso: 7.5, puntosSalud: 40, nivelAtaque: 45, fase: "Crobat", nivelEnergia: 100, descripcion: "El Senamon volador."),
@@ -55,7 +57,7 @@ class Juego {
       Senamon(nombre: "Pidgeotto", nivel: 5, tipo: "volador", peso: 30.0, puntosSalud: 63, nivelAtaque: 60, fase: "Pidgeot", nivelEnergia: 100, descripcion: "El Senamon volador."),
       Senamon(nombre: "Murkrow", nivel: 5, tipo: "volador", peso: 2.1, puntosSalud: 60, nivelAtaque: 85, fase: "Honchkrow", nivelEnergia: 100, descripcion: "El Senamon volador."),
 
-      // Eléctrico
+      // Senamones tipo eléctrico
       Senamon(nombre: "Pikachu", nivel: 5, tipo: "eléctrico", peso: 6.0, puntosSalud: 35, nivelAtaque: 55, fase: "Raichu", nivelEnergia: 100, descripcion: "El Senamon eléctrico."),
       Senamon(nombre: "Magnemite", nivel: 5, tipo: "eléctrico", peso: 6.0, puntosSalud: 25, nivelAtaque: 35, fase: "Magnezone", nivelEnergia: 100, descripcion: "El Senamon eléctrico."),
       Senamon(nombre: "Voltorb", nivel: 5, tipo: "eléctrico", peso: 10.4, puntosSalud: 40, nivelAtaque: 30, fase: "Electrode", nivelEnergia: 100, descripcion: "El Senamon eléctrico."),
@@ -69,34 +71,35 @@ class Juego {
     ];
   }
 
-  // Crea un entrenador, pidiendo información al usuario y permitiéndole seleccionar Senamones
+  // Crear un nuevo entrenador
+  // Pide información al usuario y retorna un objeto Entrenador con los datos ingresados
   Entrenador crearEntrenador(String nombre, List<Senamon> senamonesDisponibles) {
-    print("Ingrese su nombre:");
-    String? nombreEntrenador = stdin.readLineSync();
-    print("Ingrese su email:");
-    String? email = stdin.readLineSync();
-    print("Ingrese su fecha de nacimiento (YYYY-MM-DD):");
-    String? fechaStr = stdin.readLineSync();
-    DateTime fechaNacimiento = DateTime.parse(fechaStr!);
+    print("Ingrese su nombre:"); // Solicitar nombre
+    String? nombreEntrenador = stdin.readLineSync(); // Leer nombre desde entrada
+    print("Ingrese su email:"); // Solicitar email
+    String? email = stdin.readLineSync(); // Leer email desde entrada
+    print("Ingrese su fecha de nacimiento (YYYY-MM-DD):"); // Solicitar fecha de nacimiento
+    String? fechaStr = stdin.readLineSync(); // Leer fecha desde entrada
+    DateTime fechaNacimiento = DateTime.parse(fechaStr!); // Convertir a DateTime
 
-    // Crea una instancia de Entrenador con la información ingresada
+    // Crear objeto Entrenador con la información proporcionada
     Entrenador entrenador = Entrenador(
-      nombre: nombreEntrenador ?? nombre,
-      email: email ?? "",
-      fechaNacimiento: fechaNacimiento,
-      senamones: [],
+      nombre: nombreEntrenador ?? nombre, // Si no se ingresa nombre, usar el proporcionado
+      email: email ?? "", // Si no se ingresa email, usar cadena vacía
+      fechaNacimiento: fechaNacimiento, // Fecha de nacimiento ingresada
+      senamones: [], // Lista de Senamones inicial vacía
     );
 
-    print("Selecciona 5 Senamones:");
-    for (int i = 0; i < 5; i++) {
-      print("Selecciona el Senamon #${i + 1}:");
-      for (int j = 0; j < senamonesDisponibles.length; j++) {
+    print("Selecciona 5 Senamones:"); // Indicar selección de Senamones
+    for (int i = 0; i < 5; i++) { // Iterar para seleccionar 5 Senamones
+      print("Selecciona el Senamon #${i + 1}:"); // Solicitar selección de cada Senamon
+      for (int j = 0; j < senamonesDisponibles.length; j++) { // Mostrar lista de Senamones disponibles
         print("$j: ${senamonesDisponibles[j].nombre}");
       }
-      int seleccion = int.parse(stdin.readLineSync()!);
-      entrenador.senamones.add(senamonesDisponibles[seleccion]);
+      int seleccion = int.parse(stdin.readLineSync()!); // Leer selección del usuario
+      entrenador.senamones.add(senamonesDisponibles[seleccion]); // Añadir Senamon seleccionado al entrenador
     }
 
-    return entrenador;
+    return entrenador; // Retornar objeto Entrenador creado
   }
 }
