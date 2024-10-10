@@ -1,0 +1,21 @@
+p {
+    margin-bottom: 10px;
+}
+
+section {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    box-shadow: 0 0  100px rgba(0, 47, 255, 0.959);
+    padding: 100px;
+
+}
+.section select {
+    display: block;
+}
+
+body, html {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

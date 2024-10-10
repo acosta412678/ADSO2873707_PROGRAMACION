@@ -1,0 +1,36 @@
+*{
+    margin: 20px;
+    padding: auto;
+    border: 10px;
+    box-sizing: border-box;
+    vertical-align: auto;
+}
+
+.info-container label{
+    display: block;
+}
+
+.info-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    
+}
+
+.info-container {
+    margin: 20px;
+    border: 15px;
+    padding: center;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 6, 8, 1.1);;
+    background-color: #00d9ff;
+}
+
+
+body,html {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
