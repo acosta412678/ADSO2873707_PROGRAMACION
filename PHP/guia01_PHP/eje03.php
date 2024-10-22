@@ -6,32 +6,36 @@
     <title>Document</title>
 </head>
 <body>
-   <div>
+    <div>
     <?php
-         date_default_timezone_set('America/Bogota');
-     $meses = [
-        1 => 'enero',
-        2 => 'febrero',
-        3 => 'marzo',
-        4 => 'abril',
-        5 => 'mayo',
-        6 => 'junio',
-        7 => 'julio',
-        8 => 'agosto',
-        9 => 'septiembre',
-        10 => 'octubre',
-        11 => 'noviembre',
-        12 => 'diciembre'
-    ];
-    $dia = date("d");
-    $mes = $meses[date("n")];
-    $año = date("Y");
-    $hora = date("g:");
-    $minutos = date("i A");
+        date_default_timezone_set('America/Bogota'); 
 
-    echo "El día de hoy es: $dia, del mes $mes del año $año hora: $hora $minutos.";
-    
+    $dia = date('d');
+    $mes = date('F');
+    $año = date('Y');
+    $hora = date('g');
+    $minutos = date('i');
+    $periodo = date('a');
+
+    $meses = [
+        "January" => "enero",
+        "February" => "febrero",
+        "March" => "marzo",
+        "April" => "abril",
+        "May" => "mayo",
+        "June" => "junio",
+        "July" => "julio",
+        "August" => "agosto",
+        "September" => "septiembre",
+        "October" => "octubre",
+        "November" => "noviembre",
+        "December" => "diciembre"
+    ];
+
+    $mes = $meses[$mes];
+
+    echo "Hoy es $dia de $mes de $año y son las $hora:$minutos$periodo";
     ?>
-   </div> 
+    </div>
 </body>
 </html>
