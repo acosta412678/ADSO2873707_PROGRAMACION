@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/image1.png');
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Corregido: Eliminada la duplicación */
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border: 5px solid #00C843;
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #00C843;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+.input-box .icon {
+    margin-right: 10px;
+}
+
+.input-box svg {
+    width: 24px;
+    height: 24px;
+    fill: #000000; /* Corregido: Usar 'fill' en lugar de 'color' para SVG */
+}
+
+.input-box input, .input-box select {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.register-btn, .login-btn {
+    width: 31%;
+    padding: 10px;
+    background-color: #00C843;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.register-btn:hover, .login-btn:hover {
+    background-color: #00C843;
+}

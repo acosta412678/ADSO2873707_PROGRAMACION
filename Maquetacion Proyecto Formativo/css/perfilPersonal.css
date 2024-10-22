@@ -1,0 +1,187 @@
+/* Reiniciar el estilo predeterminado */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F2F2F2;
+}
+
+/* Estilos generales del contenedor */
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #3DD13F;
+    padding: 20px;
+    color: white;
+}
+
+.sidebar h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+    color: #3DD13F;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.header {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #E3E3E3;
+}
+
+.header input {
+    padding: 5px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-options .notification-icon,
+.user-options .profile-icon {
+    background-color: #E3E3E3;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* Estilos del contenido principal */
+.main-content {
+    grid-column: 2 / 3;
+    padding: 20px;
+    background-color: white;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #E3E3E3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.info {
+    flex: 1;
+}
+
+.user-rating {
+    font-size: 24px;
+    color: #FFD700;
+    display: flex;
+    gap: 5px;
+}
+
+.projects h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #3DD13F;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.status-green {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.status-red {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.project-image {
+    width: 60px;
+    height: 60px;
+    background-color: #E3E3E3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #555;
+}
+
+.productivity-chart {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+}
+
+.productivity-chart span {
+    margin-top: 10px;
+    background-color: #E3E3E3;
+    width: 200px;
+    height: 100px;
+    display: block;
+    text-align: center;
+    line-height: 100px;
+    color: #555;
+}
+
+ul {
+    color: #000;
+}
+
+li {
+    color: #000;
+}
