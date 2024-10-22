@@ -24,10 +24,7 @@ class _MainState extends State<Main> {
       
         body: ListView(
           children: const [
-            Text("Tokio"),
-            Text("Santorini"),
-            Text("Machupicho"),
-            Text("Ibiza"),
+
           ],
         ),
       ),
